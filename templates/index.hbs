@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta property="og:title" content="Coming Soon"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="http://novl.co/soon"/>
+        <meta property="og:image" content="{}"/>
+        <meta property="og:site_name" content="Novl"/>
+        <meta property="fb:app_id" content="168422459989944"/>
+        <title>Novl - Coming Soon</title>
+        <style type="text/css">
+          html, body, div, span, applet, object, iframe,
+          h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+          a, abbr, acronym, address, big, cite, code,
+          del, dfn, em, img, ins, kbd, q, s, samp,
+          small, strike, strong, sub, sup, tt, var,
+          b, u, i, center,
+          dl, dt, dd, ol, ul, li,
+          fieldset, form, label, legend,
+          table, caption, tbody, tfoot, thead, tr, th, td,
+          article, aside, canvas, details, embed,
+          figure, figcaption, footer, header, hgroup,
+          menu, nav, output, ruby, section, summary,
+          time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+          }
+          /* HTML5 display-role reset for older browsers */
+          article, aside, details, figcaption, figure,
+          footer, header, hgroup, menu, nav, section {
+            display: block;
+          }
+          body {
+            line-height: 1;
+          }
+          ol, ul {
+            list-style: none;
+          }
+          blockquote, q {
+            quotes: none;
+          }
+          blockquote:before, blockquote:after,
+          q:before, q:after {
+            content: '';
+            content: none;
+          }
+          table {
+            border-collapse: collapse;
+            border-spacing: 0;
+          }
+
+          html, body {
+            height: 100%;
+            background-color: #f1f1f1;
+            -webkit-font-smoothing: antialiased;
+          }
+
+          * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+          a {
+            color: #f1f1f1;
+            text-decoration: none;
+          }
+
+          a:hover {
+            color: #ddd;
+          }
+
+          h1 {
+            margin-bottom: 10px;
+            font-size: 72px;
+            text-shadow: 0 1px 5px #111;
+          }
+          h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            line-height: 26px;
+            text-shadow: 0 1px 3px #111;
+          }
+          p {
+            font-size: 18px;
+            line-height: 20px;
+          }
+          #container {
+            height: 100%;
+          }
+          #hero {
+            height: 100%;
+            min-height: 350px;
+            padding: 50px 0;
+            background-size: cover;
+            background-color: #222;
+            position: relative;
+          }
+          #glass {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #111;
+            opacity: .5;
+          }
+          #hero-content {
+            width: 100%;
+            height: 100% !important;
+            display: table;
+            table-layout: fixed;
+            position: relative;
+            z-index: 1;
+            color: #fbfbfb;
+          }
+          #hero-content-center {
+            width: 100%;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+          }
+          #hero-max {
+            max-width: 650px;
+            padding: 0 20px;
+            margin: 0 auto;
+          }
+          #signup {
+            -webkit-transition: opacity .3s ease;
+               -moz-transition: opacity .3s ease;
+                -ms-transition: opacity .3s ease;
+                    transition: opacity .3s ease;
+          }
+          .fade-out {
+            opacity: 0
+          }
+          .inputs {
+            height: 40px;
+            position: relative;
+            display: inline-block;
+          }
+          .inputs-border {
+            height: 40px;
+            float: left;
+            border-radius: 3px;
+            border: 1px solid #383838;
+            box-shadow: 0 1px 4px -2px #fff;
+          }
+          .inputs-border:first-child {
+            border-right: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .inputs-border.last{
+            border-left: none;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          input[type="text"],
+          input[type="email"] {
+            width: 200px;
+            height: 100%;
+            padding: 8px;
+            border: none;
+            box-shadow: 0 1px 2px -1px #111;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "proxima-nova",sans-serif;
+            color: #444;
+            float: left;
+            -webkit-font-smoothing: antialiased;
+          }
+          #name {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: 1px solid #ccc;
+          }
+          #email {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          #submit {
+            height: 100%;
+            padding: 8px;
+            margin: 0;
+            margin-left: 5px;
+            color: #fff;
+            box-shadow: 0 1px 4px -2px #fff;
+            border: 1px solid rgba(0, 0, 0, 0.35);
+            border-top: 1px solid #D69689;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: "proxima-nova",sans-serif;
+            float: left;
+            cursor: pointer;
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.32);
+            -webkit-font-smoothing: antialiased;
+
+            background: #B34B37;
+            background: -moz-linear-gradient(top, #B34B37 0%, #A2402E 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#B34B37), color-stop(100%,#A2402E));
+            background: -webkit-linear-gradient(top, #B34B37 0%,#A2402E 100%);
+            background: -o-linear-gradient(top, #B34B37 0%,#A2402E 100%);
+            background: -ms-linear-gradient(top, #B34B37 0%,#A2402E 100%);
+            background: linear-gradient(to bottom, #B34B37 0%,#A2402E 100%)
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B34B37', endColorstr='#A2402E',GradientType=0 );
+          }
+          #submit:active {
+            background: #9C3420;
+            border: 1px solid #222;
+          }
+          #response {
+            height: 40px;
+            margin-top: 10px;
+          }
+          #social-junk {
+            margin-top: 20px;
+          }
+          #social-junk iframe {
+            margin-top: 10px;
+            float: left;
+          }
+          #social-junk .popup {
+            height: 100px;
+            width: 100px;
+            margin: 0 15px;
+            display: inline-block;
+            background-size: cover;
+          }
+          #social-junk .twitter {
+            width: 122px;
+            background-image: url(images/twitter-bird-light-bgs.png);
+          }
+          #social-junk .facebook {
+            background-image: url(images/FB-f-Logo__blue_144.png);
+          }
+          footer {
+            height: 52px;
+            width: 100%;
+            margin-top: -52px;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background-color: rgba(0,0,0,.65);
+            color: #444;
+            border-top: 1px solid #333;
+            box-shadow: 0 -1px 3px -2px #222;
+            line-height: 50px;
+            text-align: center;
+          }
+          footer span {
+            color: #999;
+          }
+
+          @media (max-width: 560px) {
+            .inputs {
+              display: block;
+            }
+            .inputs-border {
+              float: none;
+              margin-bottom: 10px;
+            }
+            #name,
+            #email,
+            #submit {
+              width: 100%;
+              border-radius: 3px;
+            }
+            #submit {
+              margin-left: 0;
+            }
+          }
+        </style>
+        <script type="text/javascript" src="//use.typekit.net/qnz5whq.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript">
+          var analytics=analytics||[];(function(){var e=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group"],t=function(e){return function(){analytics.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var n=0;n<e.length;n++)analytics[e[n]]=t(e[n])})(),analytics.load=function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+e+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)};
+          analytics.load("ap6m418269");
+        </script>
+    </head>
+    <body>
+        <div id="container">
+          <section id="hero" style="background-image:url(http://interfacelift.com/wallpaper/D47cd523/03215_goodmorningyosemite_1366x768.jpg);">
+            <div id="glass"></div>
+            <div id="hero-content">
+              <div id="hero-content-center">
+                <div id="hero-max">
+                  <h1 class="tk-adelle">Novl</h1>
+                  <h2>Blaolao lao blao Blaolao lao blao Blaolao lao blao Blaolao lao blao Blaolao lao blao Blaolao lao blao.</h2>
+                  <form id="signup">
+                    <div class="inputs">
+                      <div class="inputs-border">
+                        <input id="name" type="text" name="name" placeholder="Name"/>
+                      </div>
+                      <div class="inputs-border last">
+                        <input id="email" type="email" name="email" placeholder="Email"/>
+                      </div>
+                      <input id="submit" type="submit" value="Join Waitlist"/>
+                    </div>
+                  </form>
+                  <div id="response"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer>
+            <ul>
+              <li>
+                <span>Contact: <a href="mailto:contact@novl.co">contact@novl.co</a></span>
+              </li>
+            </ul>
+          </footer>
+          <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=168422459989944";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+          <script src="/javascripts/vendor/underscore.js"></script>
+          <script src="/javascripts/vendor/backbone.js"></script>
+          <script src="/javascripts/vendor/handlebars.js"></script>
+          <script src="/templates.js"></script>
+          <script src="/javascripts/app.js"></script>
+        </div>
+    </body>
+</html>
