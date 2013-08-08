@@ -67,22 +67,38 @@
       var name = this.$el.find('#name').val(),
           email = this.$el.find('#email').val();
 
+      this.hideTooltips();
       if (name && email) {
         var account = new Account({
           name: name,
           email: email
         });
 
-        account.save()
+        account.save();
         // .done(_.bind(this.showSuccess, this, account))
         // .fail(_.bind(this.showError, this));
 
         this.showSuccess(account);
       } else {
         analytics.track('Signup: form error');
+        if (!name) {
+          this.showTooltip(this.$el.find('#name').prev('.tooltip'), 'Name is required');
+        }
+        if (!email) {
+          this.showTooltip(this.$el.find('#email').prev('.tooltip'), 'Email is required');
+        }
       }
 
       return false;
+    },
+
+    hideTooltips: function() {
+      this.$el.find('.tooltip-shown').removeClass('tooltip-shown');
+    },
+
+    showTooltip: function($el, message) {
+      $el.text(message);
+      $el.parent().addClass('tooltip-shown');
     },
 
     showSuccess: function(account) {

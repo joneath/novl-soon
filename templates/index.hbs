@@ -10,6 +10,11 @@
         <meta property="og:image" content="{}"/>
         <meta property="og:site_name" content="Novl"/>
         <meta property="fb:app_id" content="168422459989944"/>
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@novlapp">
+        <meta name="twitter:title" content="Coming Soon">
+        <meta name="twitter:description" content="Tell your story">
+        <meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-article.jpg">
         <title>Novl - Coming Soon</title>
         <style type="text/css">
           html, body, div, span, applet, object, iframe,
@@ -88,15 +93,24 @@
             font-size: 18px;
             line-height: 20px;
           }
+          .clearfix:before,
+          .clearfix:after {
+              content:"";
+              display:table;
+          }
+          .clearfix:after {
+              clear:both;
+          }
           #container {
             height: 100%;
           }
           #hero {
             height: 100%;
-            min-height: 350px;
+            min-height: 550px;
             padding: 50px 0;
             background-size: cover;
             background-color: #222;
+            background-position: center center;
             position: relative;
           }
           #glass {
@@ -148,6 +162,7 @@
             border-radius: 3px;
             border: 1px solid #383838;
             box-shadow: 0 1px 4px -2px #fff;
+            position: relative;
           }
           .inputs-border:first-child {
             border-right: none;
@@ -158,6 +173,9 @@
             border-left: none;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
+          }
+          input {
+            -webkit-appearance: none;
           }
           input[type="text"],
           input[type="email"] {
@@ -172,6 +190,40 @@
             color: #444;
             float: left;
             -webkit-font-smoothing: antialiased;
+            position: relative;
+          }
+          .tooltip {
+            height: 30px;
+            width: 100%;
+            padding-top: 8px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            opacity: 0;
+            border-right: 1px solid #7A7A7A;
+            background: rgba(255,255,255,.4);
+            color: #FFF;
+            text-shadow: 0 1px #888;
+            -webkit-transform: translate3d(0, 0, 0);
+               -moz-transform: translate3d(0, 0, 0);
+                -ms-transform: translate3d(0, 0, 0);
+                 -o-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+            -webkit-transition: all .3s ease;
+               -moz-transition: all .3s ease;
+                -ms-transition: all .3s ease;
+                    transition: all .3s ease;
+          }
+          .tooltip-shown .tooltip {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 28px, 0);
+               -moz-transform: translate3d(0, 28px, 0);
+                -ms-transform: translate3d(0, 28px, 0);
+                 -o-transform: translate3d(0, 28px, 0);
+                    transform: translate3d(0, 28px, 0);
+          }
+          .inputs-border.last .tooltip {
+            border-right: none;
           }
           #name {
             border-top-left-radius: 3px;
@@ -191,6 +243,7 @@
             padding: 8px;
             margin: 0;
             margin-left: 5px;
+            outline: none;
             color: #fff;
             box-shadow: 0 1px 4px -2px #fff;
             border: 1px solid rgba(0, 0, 0, 0.35);
@@ -202,23 +255,13 @@
             float: left;
             cursor: pointer;
             text-shadow: 0 -1px 0 rgba(0,0,0,0.32);
+            background-color: #E77E64;
             -webkit-font-smoothing: antialiased;
-
-            background: #B34B37;
-            background: -moz-linear-gradient(top, #B34B37 0%, #A2402E 100%);
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#B34B37), color-stop(100%,#A2402E));
-            background: -webkit-linear-gradient(top, #B34B37 0%,#A2402E 100%);
-            background: -o-linear-gradient(top, #B34B37 0%,#A2402E 100%);
-            background: -ms-linear-gradient(top, #B34B37 0%,#A2402E 100%);
-            background: linear-gradient(to bottom, #B34B37 0%,#A2402E 100%)
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B34B37', endColorstr='#A2402E',GradientType=0 );
           }
           #submit:active {
-            background: #9C3420;
             border: 1px solid #222;
           }
           #response {
-            height: 40px;
             margin-top: 10px;
           }
           #social-junk {
@@ -231,16 +274,23 @@
           #social-junk .popup {
             height: 100px;
             width: 100px;
-            margin: 0 15px;
             display: inline-block;
             background-size: cover;
           }
           #social-junk .twitter {
-            width: 122px;
-            background-image: url(images/twitter-bird-light-bgs.png);
+            background-image: url(images/twitter.png);
+          }
+          #social-junk .twitter:hover {
+            background-image: url(images/twitter_hover.png);
           }
           #social-junk .facebook {
-            background-image: url(images/FB-f-Logo__blue_144.png);
+            background-image: url(images/fb.png);
+            background-size: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          #social-junk .facebook:hover {
+            background-image: url(images/fb_hover.png);
           }
           footer {
             height: 52px;
@@ -250,15 +300,15 @@
             bottom: 0;
             left: 0;
             z-index: 1;
-            background-color: rgba(0,0,0,.65);
+            background-color: rgba(255,255,255,.15);
             color: #444;
-            border-top: 1px solid #333;
+            border-top: 1px solid rgba(255,255,255,.2);
             box-shadow: 0 -1px 3px -2px #222;
             text-align: center;
             line-height: 50px;
           }
           footer span {
-            color: #999;
+            color: #fff;
           }
 
           @media (max-width: 560px) {
@@ -268,6 +318,16 @@
             .inputs-border {
               float: none;
               margin-bottom: 10px;
+              -webkit-transition: margin .3s ease;
+                 -moz-transition: margin .3s ease;
+                  -ms-transition: margin .3s ease;
+                      transition: margin .3s ease;
+            }
+            .inputs-border.tooltip-shown {
+              margin-bottom: 35px;
+            }
+            #hero {
+              padding: 0;
             }
             #name,
             #email,
@@ -289,19 +349,21 @@
     </head>
     <body>
         <div id="container">
-          <section id="hero" style="background-image:url(http://interfacelift.com/wallpaper/D47cd523/03215_goodmorningyosemite_1366x768.jpg);">
+          <section id="hero" style="background-image:url(images/book.jpeg);">
             <div id="glass"></div>
             <div id="hero-content">
               <div id="hero-content-center">
-                <div id="hero-max">
+                <div id="hero-max" class="clearfix">
                   <h1 class="tk-adelle">Novl</h1>
                   <h2>Blaolao lao blao Blaolao lao blao Blaolao lao blao Blaolao lao blao Blaolao lao blao Blaolao lao blao.</h2>
                   <form id="signup">
                     <div class="inputs">
                       <div class="inputs-border">
+                        <div class="tooltip"></div>
                         <input id="name" type="text" name="name" placeholder="Name"/>
                       </div>
                       <div class="inputs-border last">
+                        <div class="tooltip"></div>
                         <input id="email" type="email" name="email" placeholder="Email"/>
                       </div>
                       <input id="submit" type="submit" value="Join Waitlist"/>
